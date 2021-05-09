@@ -7,7 +7,7 @@ from mpl_toolkits.mplot3d import Axes3D
 
 PATH = "C:\\knv\\Projs\\2021-1\\KnV\\MVTEC_bottle\\"
 PATH = 'C:\\knv\\Projs\\2021-1\\KnV\\DATA\\Dataset\\0324_10K_classified_by_human_learning\\train\\normal\\'
-PATH = 'C:\\normal\\'
+# PATH = 'C:\\normal\\'
 
 PREFIX_BMP = '.bmp'
 PREFIX_PNG = '.png'

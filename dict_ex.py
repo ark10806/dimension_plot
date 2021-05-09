@@ -7,7 +7,7 @@ from mpl_toolkits.mplot3d import Axes3D
 
 PATH = "C:\\knv\\Projs\\2021-1\\KnV\\MVTEC_bottle\\"
 PATH = 'C:\\knv\\Projs\\2021-1\\KnV\\DATA\\Dataset\\0324_10K_classified_by_human_learning\\train\\normal\\'
-PATH = 'C:\\normal\\'
+# PATH = 'C:\\normal\\'
 
 PREFIX_BMP = '.bmp'
 PREFIX_PNG = '.png'
@@ -60,25 +60,10 @@ for i, filePath in enumerate(prnFile(PATH, PREFIX_BMP)):
     for j in range(imsize):
         for k in range(imsize):
             xybgr[(j, k, img[0][j][k], img[1][j][k], img[2][j][k])] = 1
-            # idx = img[0][j][k]*256*256 + img[1][j][k]*256 + img[2][j][k]
-            # x.append(i)
-            # y.append(j)
-            # z.append(idx)
-            # ax.scatter(j,k,idx, '.', c=BGR2HEX(idx), s=1)
-        # print(f'{j*k / (imsize * imsize) *100}')
-
-            
-
-    # if i ==100:
-    #     # print(len(xybgr.keys()))
-    #     break
-
-    # print(len(xybgr.keys()))
-    # px.append(i)
     py.append(len(xybgr.keys()))
 
     print(f'{i} / {n_img}')
 
-print(f'{px[-1] / (255**3 * 128**2) * 100}%')
+print(f'{len(xybgr.keys()) / (255**3 * 128**2) * 100}%')
 plt.plot(py, 'ro')
 plt.show()
